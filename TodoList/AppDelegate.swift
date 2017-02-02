@@ -43,6 +43,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Saves changes in the application's managed object context before the application terminates.
         self.saveContext()
     }
+    
+    
+    func application(_ application: UIApplication, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+        switch shortcutItem.type {
+        case "666":
+            print("静态添加")
+        case "777":
+            print("动态代码添加一")
+        case "888":
+            print("动态代码添加二")
+        case "999":
+            print("自定义图片")
+        default:
+            print("")
+        }
+    }
 
     // MARK: - Core Data stack
 
